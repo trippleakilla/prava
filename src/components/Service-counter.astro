@@ -1,0 +1,11 @@
+---
+import { Counter } from "./Counter.component";
+---
+
+<section
+  class="py-10 px-5 md:px-30 xl:px-40 bg-[#24AB66] w-full flex flex-col md:flex-row gap-10 justify-center items-center"
+>
+  <Counter client:load title="Видано посвідчень" value={1942} />
+  <Counter client:load title="Видано посвідчень" value={829} />
+  <Counter client:load title="Відновлено посвідчень" value={471} />
+</section>

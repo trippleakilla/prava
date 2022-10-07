@@ -1,0 +1,18 @@
+---
+import { ReactComponent } from "react";
+interface Props {
+  title: string;
+  greeting?: string;
+  description: string;
+  Icon: ReactComponent;
+}
+const { title, greeting, Icon, description } = Astro.props;
+---
+
+<div
+  class="flex-1 rounded-xl shadow-lg w-max px-8 py-10 max-w-full text-center bg-gray-50 hover:scale-105 hover:shadow-xl transition-all duration-200"
+>
+  <Icon className="w-40 h-40 mx-auto text-[#24AB66]" />
+  <h3 class="text-center text-xl mt-6">{title}</h3>
+  <p class="text-md mt-3">{description}</p>
+</div>

@@ -1,0 +1,48 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { RocketLaunchIcon } from "@heroicons/react/24/solid/index.js";
+import Image1 from "../assets/footer-1.jpg";
+---
+
+<footer class="relative px-0 md:px-30 lg:px-40">
+  <div class="h-full">
+    <div class="flex flex-wrap flex-col md:flex-row justify-center">
+      <Picture
+        alt="Сервісний центр"
+        src={Image1}
+        widths={[200, 400, 800]}
+        formats={["avif", "jpeg", "png", "webp"]}
+        sizes="(max-width: 800px) 100vw, 800px"
+        aspectRatio="4:3"
+      />
+      <div
+        class="px-10 py-10 flex flex-col justify-center items-center bg-gray-50 flex-1 min-w-[300px]"
+      >
+        <div>
+          <h3 class="text-md">Замовляйте у нас із гарантією</h3>
+          <h1 class="text-3xl text-[#2DD881]">
+            Потрібно сісти за кермо?
+          </h1>
+          <ul class="z-20 text-2xl text-black space-y-3 mt-8">
+            <li class="hover:text-[#2DD881] cursor-pointer">
+              <RocketLaunchIcon width={28} className={"inline-block"} />Без попередньої оплати
+            </li>
+            <li class="hover:text-[#2DD881] cursor-pointer">
+              <RocketLaunchIcon width={28} className={"inline-block"} /> Додавання категорій.
+            </li>
+            <li class="hover:text-[#2DD881] cursor-pointer">
+              <RocketLaunchIcon width={28} className={"inline-block"} />Швидко та надійно
+            </li>
+            <li class="hover:text-[#2DD881] cursor-pointer">
+              <RocketLaunchIcon width={28} className={"inline-block"} />Отримання у відділенні Нової пошти
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#24ab66] text-white flex flex-wrap justify-between p-10 md:px-30 lg:px-40 mx-0 md:-mx-30 lg:-mx-40">
+    <h4 class="text-xs md:text-md max-w-max">© 2016 - 2022. Головний сервісний центр МВС</h4>
+    <h4 class="text-xs md:text-md max-w-max">Auto-dokuments UA</h4>
+ </div>
+</footer>

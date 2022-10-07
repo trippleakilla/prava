@@ -1,0 +1,41 @@
+---
+import { WalletIcon } from "@heroicons/react/24/solid/index.js";
+import Button from "./Button.component";
+
+interface Props {
+  title: string;
+  price?: string;
+  list: string[];
+}
+
+const { price = "", title, list } = Astro.props;
+---
+
+<div
+  class="text-black rounded-md border border-black px-5 pt-10 pb-24 flex-auto w-50 shadow-md relative"
+>
+  <div>
+    <div class="flex items-center">
+      <WalletIcon className={"w-10 text-[#24AB66] mr-2"} />
+      <h1 class="text-xl">{title}</h1>
+    </div>
+    <h1 class="text-[#24AB66] text-xl font-bold">{price}</h1>
+    <ul class="mt-5">
+      {
+        list.map((text) => (
+          <li class="text-xl">
+            <span class="text-[#24AB66] text-2xl">• </span>
+            {text}
+          </li>
+        ))
+      }
+    </ul>
+    <Button
+      asLink={true}
+      href={"http://t.me/serviscentrmvs"}
+      client:visible
+      text="Зробити замовлення"
+      className="mt-10 text-sm px-2 py-2 absolute bottom-7"
+    />
+  </div>
+</div>

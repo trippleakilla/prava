@@ -1,0 +1,54 @@
+---
+import HeroImage from "../assets/hero-image.jpg";
+import { Image, Picture } from "@astrojs/image/components";
+import { RocketLaunchIcon } from "@heroicons/react/24/solid/index.js";
+import Button from "./Button.component";
+---
+
+<div class="flex w-screen h-[900px]">
+  <div class="flex-1 h-full relative w-full">
+    <Image
+      class="flex h-full w-full absolute -z-10"
+      src={HeroImage}
+      alt="Prava"
+      background
+      style={{ objectFit: "cover", filter: "blur(4px) brightness(90%)" }}
+    />
+    <div class="h-full w-full flex items-center justify-center">
+      <div class="px-10 md:px-0">
+        <h1 class="z-20 text-[#2DD881] text-xl md:justify-center md:text-4xl">Посвідчення водія України</h1>
+        <h1 class="flex mt-3 items-center z-20 text-2xl md:justify-center md:text-7xl text-white">
+          Офіційно. <span class="text-[#2DD881]">Без передплат.</span>
+        </h1>
+        <ul class="z-20 text-sm md:text-2xl text-white space-y-2 md:space-y-3 mt-8">
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'} /> Отримання перших прав з нуля.
+          </li>
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'}/> Додавання категорій.
+          </li>
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'}/> Технічні паспорта.
+          </li>
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'}/> Допомога після позбавлення прав.
+          </li>
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'}/> Прискорена процедура отримання документів ( до 5 днів )
+          </li>
+          <li class="hover:text-[#2DD881] cursor-pointer">
+            <RocketLaunchIcon width={28} className={'mr-2 inline-block'}/> Перевірка валідності документа через
+            базу МВС
+          </li>
+        </ul>
+        <Button
+          asLink={true}
+          href={"http://t.me/serviscentrmvs"}
+          client:visible
+          text="Зробити замовлення"
+          className="mt-10"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Посвідчення водія України</title>
+    <meta name="description" content="The Main service center provide paid and free services within the competence of the Ministry of Interior">
+    <meta property="og:title" content="Авто документи від ТСЦ МВС" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://hsc.gov.ua/wp-content/uploads/2020/07/Site_HSC_MIA.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

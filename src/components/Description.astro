@@ -1,0 +1,37 @@
+---
+import Card from "./Card.astro";
+import {
+  BanknotesIcon,
+  ChatBubbleOvalLeftIcon,
+  CheckBadgeIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/solid/index.js";
+---
+
+<section class="my-20 px-10 md:px-30 xl:px-40">
+  <h1 class="mx-auto text-6xl max-w-max text-[#24AB66] text-center">НАШІ ПЕРЕВАГИ</h1>
+  <div
+    class="w-full mt-10 px-0 md:px-40 flex flex-wrap flex-col md:flex-row gap-10"
+  >
+    <Card
+      title="Оптимальні ціни"
+      Icon={BanknotesIcon}
+      description="Ми пропонуємо найвигідніші ціни для Вас. За рахунок відсутності посередників."
+    />
+    <Card
+      title="Відсутність передпла"
+      Icon={CheckBadgeIcon}
+      description="Оплата замовлення після перевірки документа на Новій Пошті."
+    />
+    <Card
+      title="Абсолютно легально"
+      Icon={ShieldCheckIcon}
+      description="Права оформляються через автошколу, посвідчення заноситься до бази даних МВС."
+    />
+    <Card
+      title="Підтримка 24/7 для Вас"
+      Icon={ChatBubbleOvalLeftIcon}
+      description="Замовляйте у будь-який час, ми завжди на зв'язку."
+    />
+  </div>
+</section>
